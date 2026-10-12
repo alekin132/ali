@@ -957,13 +957,213 @@ th,
 	}
 }
 
+body {
+	background:
+		radial-gradient(ellipse at 12% 8%, rgba(138, 93, 174, 0.2), transparent 34rem),
+		radial-gradient(ellipse at 92% 38%, rgba(177, 112, 147, 0.13), transparent 30rem),
+		#17141d;
+	font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+	line-height: 1.75;
+}
+
+@media only screen {
+	body {
+		max-width: 960px;
+		padding: 1.5rem;
+	}
+}
+
+.page {
+	padding: 1.25rem 2.5rem 2.75rem;
+	overflow: hidden;
+	background: linear-gradient(145deg, rgba(42, 35, 53, 0.97), rgba(31, 27, 40, 0.98));
+	border: 1px solid rgba(229, 202, 255, 0.12);
+	border-radius: 28px;
+	box-shadow: 0 28px 90px rgba(0, 0, 0, 0.35);
+}
+
+.page-cover-image {
+	max-height: 290px;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 20px;
+	box-shadow: 0 12px 36px rgba(0, 0, 0, 0.24);
+}
+
+.page-header-icon-with-cover {
+	position: relative;
+	z-index: 1;
+	margin-top: -1.5rem;
+	margin-bottom: 0.6rem;
+}
+
+.page-header-icon img {
+	width: 76px;
+	height: 76px;
+	padding: 4px;
+	object-fit: cover;
+	background: #292331;
+	border: 3px solid #292331;
+	border-radius: 22px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.page-title {
+	margin-bottom: 0.35em;
+	color: #f6eaff;
+	font-size: clamp(2.25rem, 6vw, 3.5rem);
+	letter-spacing: -0.045em;
+}
+
+.page-body {
+	padding-top: 0.5rem;
+}
+
+.page-body > h1 {
+	margin-top: 2.4rem;
+	padding-bottom: 0.6rem;
+	color: #e2c3ff;
+	border-bottom: 1px solid rgba(226, 195, 255, 0.16);
+	letter-spacing: -0.025em;
+}
+
+.page-body > h1:first-of-type {
+	margin-top: 1rem;
+	font-size: clamp(1.45rem, 4vw, 1.85rem);
+}
+
+.page-body > hr {
+	margin: 2rem 0;
+	border-bottom-color: rgba(226, 195, 255, 0.14);
+}
+
+blockquote {
+	padding: 1.1rem 1.3rem;
+	color: #f0e8f5;
+	background: rgba(170, 127, 198, 0.09);
+	border: 1px solid rgba(226, 195, 255, 0.1);
+	border-left: 4px solid #bd91df;
+	border-radius: 4px 16px 16px 4px;
+	line-height: 1.8;
+}
+
+.page-body figure.image {
+	text-align: center;
+}
+
+.page-body figure.image img {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 18px;
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.page-body figure.image a:hover img {
+	transform: translateY(-3px) scale(1.015);
+	box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+}
+
+figure.link-to-page {
+	margin: 0.85rem 0;
+}
+
+figure.link-to-page a {
+	display: flex;
+	align-items: center;
+	min-height: 76px;
+	padding: 0.7rem 1rem;
+	color: #f1e5fb;
+	text-decoration: none;
+	background: rgba(255, 255, 255, 0.045);
+	border: 1px solid rgba(226, 195, 255, 0.13);
+	border-radius: 16px;
+	transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+figure.link-to-page a:hover {
+	transform: translateY(-2px);
+	background: rgba(190, 145, 223, 0.12);
+	border-color: rgba(226, 195, 255, 0.34);
+}
+
+figure.link-to-page .icon {
+	width: 52px;
+	height: 52px;
+	max-width: none;
+	max-height: none;
+	margin-right: 0.9rem;
+	object-fit: cover;
+	border-radius: 12px;
+}
+
+.spotify-player {
+	border: 1px solid rgba(226, 195, 255, 0.16);
+	border-radius: 18px;
+	box-shadow: 0 14px 36px rgba(0, 0, 0, 0.24);
+}
+
+.song-of-day-container {
+	margin: 15px 0;
+	line-height: 0;
+	height: 80px;
+	overflow: hidden;
+	border-radius: 18px;
+}
+
+.song-of-day-container .spotify-player {
+	height: 152px;
+}
+
+@media only screen and (max-width: 640px) {
+	body {
+		margin: 0 auto;
+		padding: 0.65rem;
+	}
+
+	.page {
+		padding: 0.8rem 1.1rem 1.6rem;
+		border-radius: 21px;
+	}
+
+	.page-cover-image {
+		max-height: 210px;
+		border-radius: 15px;
+	}
+
+	.page-header-icon img {
+		width: 64px;
+		height: 64px;
+		border-radius: 19px;
+	}
+
+	.page-body > h1 {
+		margin-top: 1.8rem;
+	}
+
+	.column-list:not(.playlist-columns) {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.column-list:not(.playlist-columns) > .column {
+		flex: 0 0 auto;
+		width: 100% !important;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.page-body figure.image img,
+	figure.link-to-page a {
+		transition: none;
+	}
+}
+
 </style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3f69e275-ac7e-80dd-986d-ff37e3e3ce08" class="page sans" data-notion-page-icon="attachment:8d13f153-c3d2-4382-bc0a-63e882f4dbe8:ezgif-47c43ad0f7ccc400.gif"><header><img class="page-cover-image" src="https://i.pinimg.com/736x/fc/fa/8d/fcfa8da89011b60a2c92aea12c5c1948.jpg" style="object-position:center 52.269999999999996%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Mi%20linda%20Ali/ezgif-47c43ad0f7ccc400.gif"/></div><h1 class="page-title" dir="auto">Mi linda Ali</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><hr id="3f69e275-ac7e-80a4-811c-e68bdb3d513e" dir="auto"/><h1 id="3f69e275-ac7e-801b-ad46-efb1c0f50fb5" class="block-color-purple" data-notion-highlight="purple" dir="auto">UN LUGAR PENSADO SOLO PARA TI</h1><div id="3f69e275-ac7e-804b-90e9-e72cc59f8b59" class="column-list" data-notion-column-list="" dir="auto"><div id="3f69e275-ac7e-8048-aa3c-ce85ce935f29" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><blockquote id="3f69e275-ac7e-806e-9f75-c61a1f264ec7" class="block-color-yellow" data-notion-highlight="yellow" dir="auto"><em>&quot;Incluso en los días en que te sientas menos o ajena, eres la flor más hermosa. Sin importar cuándo o dónde, iluminas mis días con tu amor y belleza.&quot;</em></blockquote><p id="3f69e275-ac7e-807b-8f47-f1637b85f546" class="" dir="auto">
 	
-</p></div><div id="3f69e275-ac7e-803a-9212-d2e848eebd1b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><figure id="3f69e275-ac7e-8018-a7e6-d7f1ed35100c" class="image" data-notion-image="Mi%20linda%20Ali/chiikawa-chiikawa-dancing.gif" dir="ltr"><a href="Mi%20linda%20Ali/chiikawa-chiikawa-dancing.gif"><img style="width:192px" src="Mi%20linda%20Ali/chiikawa-chiikawa-dancing.gif"/></a></figure></div></div><hr id="3f69e275-ac7e-801d-80a8-e80303f01cda" dir="auto"/><h1 id="3f69e275-ac7e-80e6-b231-cd7534871431" class="block-color-purple" data-notion-highlight="purple" dir="auto"><strong>💌 CARTAS PARA TI</strong></h1><figure id="3f69e275-ac7e-80b2-a90e-cb57c14c7f6b" class="link-to-page"><a href="Mi%20linda%20Ali/11%20de%20octubre%202026%203f69e275ac7e80b2a90ecb57c14c7f6b.html" data-notion-page-id="3f69e275-ac7e-80b2-a90e-cb57c14c7f6b" data-notion-space-id="69d9e275-ac7e-8103-b718-0003f371c41c"><img class="icon" src="Mi%20linda%20Ali/11%20de%20octubre%202026/637b00ac39d11d95f7e7b341d4c12257.jpg"/>11 de octubre 2026</a></figure><hr id="3f69e275-ac7e-8046-8bdf-c74dfe4bb627" dir="auto"/>
+</p></div><div id="3f69e275-ac7e-803a-9212-d2e848eebd1b" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><figure id="3f69e275-ac7e-8018-a7e6-d7f1ed35100c" class="image" data-notion-image="Mi%20linda%20Ali/chiikawa-chiikawa-dancing.gif" dir="ltr"><a href="Mi%20linda%20Ali/chiikawa-chiikawa-dancing.gif"><img style="width:192px" src="Mi%20linda%20Ali/chiikawa-chiikawa-dancing.gif"/></a></figure></div></div><hr id="3f69e275-ac7e-801d-80a8-e80303f01cda" dir="auto"/><h1 id="3f69e275-ac7e-80e6-b231-cd7534871431" class="block-color-purple" data-notion-highlight="purple" dir="auto"><strong>💌 CARTAS PARA TI</strong></h1><figure id="3f69e275-ac7e-80b2-a90e-cb57c14c7f6b" class="link-to-page"><a href="Mi%20linda%20Ali/11%20de%20octubre%202026%203f69e275ac7e80b2a90ecb57c14c7f6b.html" data-notion-page-id="3f69e275-ac7e-80b2-a90e-cb57c14c7f6b" data-notion-space-id="69d9e275-ac7e-8103-b718-0003f371c41c"><img class="icon" src="Mi%20linda%20Ali/11%20de%20octubre%202026/637b00ac39d11d95f7e7b341d4c12257.jpg"/>11 de octubre 2026</a></figure><figure id="3f79e275-ac7e-80c4-9db3-e033c88303c5" class="link-to-page"><a href="Mi%20linda%20Ali/12%20de%20octubre%202026%203f79e275ac7e80c49db3e033c88303c5.html" data-notion-page-id="3f79e275-ac7e-80c4-9db3-e033c88303c5" data-notion-space-id="69d9e275-ac7e-8103-b718-0003f371c41c"><img class="icon" src="Mi%20linda%20Ali/12%20de%20octubre%202026/chae-ch-young-twice.gif"/>12 de octubre 2026</a></figure><hr id="3f69e275-ac7e-8046-8bdf-c74dfe4bb627" dir="auto"/>
 
 <h1 id="3f69e275-ac7e-8028-8a5e-e272363551cf" class="block-color-purple" data-notion-highlight="purple" dir="auto">⭐CANCIÓN DEL DÍA</h1>
-<div style="margin: 15px 0;">
-  <iframe class="spotify-player" src="https://open.spotify.com/embed/track/7HW5WIw7ZgZORCzUxv5gW5?utm_source=generator&amp;theme=0" width="100%" height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Reproductor de la canción del día en Spotify"></iframe>
+<div class="song-of-day-container">
+  <iframe class="spotify-player" src="https://open.spotify.com/embed/track/2JoZzpdeP2G6Csfdq5aLXP?utm_source=generator&amp;theme=0" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Reproductor de la canción del día en Spotify"></iframe>
 </div>
 
 <hr id="3f69e275-ac7e-8059-a8e2-d3b1809fd3e3" dir="auto"/>
